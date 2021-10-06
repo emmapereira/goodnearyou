@@ -7,12 +7,17 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <div>
-      <h1 className={styles.title}>Homepage</h1>
-      <p className={styles.text}>This is the homepage of our project welcome to Good Near You</p>
-      <Link href="/map">
-        <a className={styles.btn}>See the map with the stores</a>
-      </Link>
-    </div>
+    <>
+      <Head>
+        <title>Good Near You | Home</title>
+      </Head>
+      <div>
+        <h1 className={styles.title}>Homepage</h1>
+        <p className={styles.text}>This is the homepage of our project welcome to Good Near You</p>
+        <Link href="/map">
+          <a className={styles.btn}>See the map with the stores</a>
+        </Link>
+      </div>
+    </>
   )
 }
