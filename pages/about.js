@@ -5,6 +5,7 @@ const About = () => {
         <> 
             <Head>
                 <title>Good Near You | About</title>
+                <meta name="keywords" content="goodnearyou"/>
             </Head>
             <div>
                 <h1>About</h1>

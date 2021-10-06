@@ -44,3 +44,9 @@ footer {
   color: #4979ff;
   text-decoration: underline;
 }
+
+.logo {
+  width: 100%;
+  height: auto;
+  /*text-align:center;*/
+}

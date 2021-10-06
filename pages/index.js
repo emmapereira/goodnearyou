@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Good Near You | Home</title>
+        <meta name="keywords" content="goodnearyou"/>
       </Head>
       <div>
         <h1 className={styles.title}>Homepage</h1>
