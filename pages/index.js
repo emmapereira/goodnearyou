@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Footer from '../components/Footer'
+import GMap from '../components/GMap'
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Good Near You | Home</title>
+        <meta name="keywords" content="goodnearyou"/>
       </Head>
       <div>
         <h1 className={styles.title}>Homepage</h1>
@@ -18,6 +18,7 @@ export default function Home() {
           <a className={styles.btn}>See the map with the stores</a>
         </Link>
       </div>
+      <GMap/>
     </>
   )
 }

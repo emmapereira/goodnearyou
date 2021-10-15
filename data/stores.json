@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Myrorna",
+    "address": "Järntorgsgatan 10, 413 01 Göteborg",
+    "schedule": "mon to fri 10-19h, sat 11-17h, sun 12-16h",
+    "type": "Second-hand",
+    "description": "Four floors of second hand clothes for everyone",
+    "latitude": 57.7008333,
+    "longitude": 11.9544444
+  },
+  {
+    "id": 2,
+    "name": "Eco & Fair",
+    "address": "Landsvägsgatan 38, 413 04 Göteborg",
+    "schedule": "tues to fri 12-18h, sat 12-16h",
+    "type": "slow fashion",
+    "description": "small local shop selling sustainably made items",
+    "latitude": 57.6984041,
+    "longitude": 11.9493865
+  }
+]

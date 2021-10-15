@@ -1,17 +1,38 @@
 import Head from 'next/head'
+import styles from '../styles/Stores.module.css'
 
-const Map = () => {
-    return (   
+export const getStaticProps = async () => {
+
+    const res = await fetch('https://jsonplaceholder.typicode.com/photos')
+    const data = await res.json();
+
+    return {
+        props: { stores: data }
+    }
+}
+
+
+const Map = ({ stores }) => {
+    return ( 
         <>
-            <Head>
+        <Head>
                 <title>Good Near You | Map</title>
+                <meta name="keywords" content="goodnearyou"/>
             </Head>
-            <div>
-                <h1>Map</h1>
-                <p>This is the map with all of the stores</p>
-            </div>
+        <div>
+            <h1>See the map with all the stores here</h1>
+            {stores.map(store => (
+                <div key={store.id}>
+                    <a className={styles.single}>
+                        <h3>
+                            {store.title}
+                        </h3>
+                    </a>
+                </div>
+            ))} 
+        </div>
         </>
-    );
+     );
 }
  
 export default Map;
