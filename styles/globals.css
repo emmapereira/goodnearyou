@@ -1,38 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 
 body {
   background: #ffff;
   color: #333;
-  font-family: "Nunito";
+  font-family: 'Merriweather', serif;
 }
+
+h1 {
+  font-weight: 400;
+  text-align: center;
+
+}
+
 a {
   color: #333;
   text-decoration: none;
 }
+
 .content {
   max-width: 960px;
   margin: 0 auto;
 }
+
+header{
+  background-image: url(../public/Header.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 200px;
+  position: relative;
+}
+
+#title {
+  position: absolute;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+}
+
 nav {
-  margin: 10px auto 80px;
   padding: 10px 0;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid #ddd;
 }
 nav a {
-  margin-left: 12px;
+  margin: 0 2em;
 }
-nav .logo {
-  margin-right: auto;
+
+#icon{
+  display: none;
 }
+
+/* nav .logo {
+  height: 150px;
+  width: 100%;
+} */
 footer {
-  display: block;
+  max-width: inherit;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #E59E82;
   text-align: center;
   padding: 30px 0;
   margin-top: 60px;
-  color: #777;
+  color: #f2f2f2;
   border-top: 1px solid #eaeaea;
 }
 
@@ -45,8 +86,20 @@ footer {
   text-decoration: underline;
 }
 
-.logo {
-  width: 100%;
-  height: auto;
-  /*text-align:center;*/
+@media (min-width: 571px) and (max-width: 1000px) {
+  p {
+    padding: 0 2em;
+  }
+}
+
+@media(max-width: 570px) {
+
+  #title {
+    font-size: 1.5em;
+  }
+
+  p {
+    padding: 0 1em;
+  }
+
 }
