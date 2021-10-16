@@ -21,6 +21,7 @@ const center = {
     zoomControl: true,
 }*/
 
+
 const GMap = () => { 
     const {isLoaded, loadError} = useLoadScript({
         googleMapsApiKey: "AIzaSyCi0xsW1SJeoMI75dm4BRz01ab-ryQR0mg",            
@@ -28,10 +29,31 @@ const GMap = () => {
     })
 
     const [selected, setSelected] = React.useState(null)
+    const [infoOpen, setInfoOpen] = React.useState(false)
+    const [markerMap, setMarkerMap] = React.useState({})
     const mapRef = React.useRef();
     const onMapLoad = React.useCallback((map) => {
         mapRef.current = map;
     }, []);
+
+    // We have to create a mapping of our places to actual Marker objects
+    const markerLoadHandler = (marker, store) => {
+        return setMarkerMap(prevState => {
+            return { ...prevState, [store.id]: marker };
+        });
+    };
+
+    const markerClickHandler = (event, store) => {
+        // Remember which place was clicked
+        setSelected(store);
+    
+        // Required so clicking a 2nd marker works as expected
+        if (infoOpen) {
+          setInfoOpen(false);
+        }
+    
+        setInfoOpen(true);
+    }
 
     if (loadError) return "Error loading maps"
     if (!isLoaded) return "Loading Maps"
@@ -53,17 +75,23 @@ const GMap = () => {
                         lat: store.latitude,
                         lng: store.longitude
                     }}
-                    onClick = {() => {
-                        setSelected(store)
-                    }}
+                    onLoad={marker => markerLoadHandler(marker, store)}
+                    onClick={event => markerClickHandler(event, store)}
                 />
             ))}
 
-            {selected ? (<InfoWindow position={{ lat: selected.lat, lng: selected.lng}}> 
-                <div>
-                    <h2>hey there</h2>
-                </div>
-            </InfoWindow>) : null}
+            {infoOpen && selected && (
+                <InfoWindow 
+                    anchor={markerMap[selected.id]}
+                    onCloseClick={() => setInfoOpen(false)} 
+                > 
+                    <div>
+                        <h3>{selected.name}</h3>
+                        <h4>{selected.address}</h4>
+                    </div>
+                </InfoWindow>
+            )}
+
             </GoogleMap>
         </div>
     );
