@@ -1,6 +1,20 @@
 import { GoogleMap, useLoadScript, Marker, InfoWindow } from "@react-google-maps/api"
 import stores from '../data/stores.json'
+import '../styles/Home.module.css'
 import React, {useState} from "react"
+import usePlacesAutocomplete, {
+    getGeocode,
+    getLatLng,
+  } from "use-places-autocomplete";
+  import {
+    Combobox,
+    ComboboxInput,
+    ComboboxPopover,
+    ComboboxList,
+    ComboboxOption,
+  } from "@reach/combobox";
+
+  import "@reach/combobox/styles.css";
 
 
 const libraries = ["places"]
@@ -32,9 +46,16 @@ const GMap = () => {
     const [infoOpen, setInfoOpen] = React.useState(false)
     const [markerMap, setMarkerMap] = React.useState({})
     const mapRef = React.useRef();
+
     const onMapLoad = React.useCallback((map) => {
         mapRef.current = map;
     }, []);
+
+    const panTo = React.useCallback(({ lat, lng }) => {
+        mapRef.current.panTo({ lat, lng });
+        mapRef.current.setZoom(12);
+      }, []);
+
 
     // We have to create a mapping of our places to actual Marker objects
     const markerLoadHandler = (marker, store) => {
@@ -60,6 +81,9 @@ const GMap = () => {
 
     return (
         <div>
+            <Search panTo = {panTo} />
+            <Locate panTo = {panTo} />
+
             <GoogleMap 
                 mapContainerStyle={mapContainerStyle} 
                 zoom={12} 
@@ -98,3 +122,79 @@ const GMap = () => {
 }
  
 export default GMap;
+
+function Locate({ panTo }) {
+    return (
+      <button
+        className="locate"
+        onClick={() => {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              panTo({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              });
+            },
+            () => null
+          );
+        }}
+      >
+        <img src="../public/compass.svg" alt="compass" />
+      </button>
+    );
+  }
+
+function Search ({panTo}) {
+    const {
+        ready,
+        value,
+        suggestions: { status, data },
+        setValue,
+        clearSuggestions,
+    } = usePlacesAutocomplete({
+        requestOptions: {
+          location: { lat: () => 57.6995819, lng: () => 11.9144126 },
+          radius: 100 * 1000,
+        },
+    })
+
+    const handleInput = (e) => {
+        setValue(e.target.value);
+      };
+    
+      const handleSelect = async (address) => {
+        setValue(address, false);
+        clearSuggestions();
+    
+        try {
+          const results = await getGeocode({ address });
+          const { lat, lng } = await getLatLng(results[0]);
+          panTo({ lat, lng });
+        } catch (error) {
+          console.log("😱 Error: ", error);
+        }
+      };
+
+    return (
+        <div className="search">
+          <Combobox 
+            onSelect={handleSelect}>
+
+            <ComboboxInput
+              value={value}
+              onChange={handleInput}
+              disabled={!ready}
+              placeholder="Search your location"
+            />
+            <ComboboxPopover>
+                <ComboboxList>
+                    {status === "OK" &&
+                    data.map(({ id, description }) => (
+                        <ComboboxOption key={id} value={description} />
+                    ))}
+                </ComboboxList>
+            </ComboboxPopover>
+          </Combobox>
+        </div>
+      );
+}
