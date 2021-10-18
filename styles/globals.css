@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+#__next {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
 
 body {
   background: #ffff;
@@ -22,7 +27,10 @@ a {
 
 .content {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0
+   auto;
+  text-align: center
+  ;
 }
 
 header{
@@ -56,7 +64,7 @@ nav a {
   margin: 0 2em;
 }
 
-#icon{
+.navIcon {
   display: none;
 }
 
@@ -65,8 +73,7 @@ nav a {
   width: 100%;
 } */
 footer {
-  max-width: inherit;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background: #E59E82;
@@ -100,6 +107,27 @@ footer {
 
   p {
     padding: 0 1em;
+  }
+
+  #topNav {
+    display: none;
+  }
+
+  .navIcon {
+    background-color: #FFF;
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #mobileMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 2em 0;
+    border-bottom: none;
+    font-size: 1.4em;
+    border-bottom: 1px solid rgb(71, 71, 71); ;
   }
 
 }
