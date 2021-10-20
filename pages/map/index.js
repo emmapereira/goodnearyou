@@ -26,7 +26,7 @@ const Map = ({storesList}) => {
             <h1>See the map with all the stores here</h1>
 
             <GMap/>
-
+            <div id="fakeMap"></div>
             {storesList.map(store => (
                 <Link href = {'/map/' + store.id } key={store.id}>
                     <a className={styles.single}>
