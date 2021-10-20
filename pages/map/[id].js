@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import stores from '../../data/stores.json'
 
 export const getStaticProps = async ({params}) => {
@@ -26,6 +27,11 @@ export const getStaticPaths = async () => {
 
 const Details = ({store}) => {
     return ( 
+        <>
+        <Head>
+        <meta name="Viewport" content="width=device-width, initial-scale=1, maximum-scale=2"></meta>
+        </Head>
+
         <div>
             <h1>{store.name}</h1>
             <p>{store.type}</p>
@@ -33,6 +39,7 @@ const Details = ({store}) => {
             <p>{store.schedule}</p>
             <p>{store.description}</p>
         </div>
+        </>
      );
 }
  
