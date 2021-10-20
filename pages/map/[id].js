@@ -1,4 +1,5 @@
 import stores from '../../data/stores.json'
+import styles from '../../styles/Stores.module.css'
 
 export const getStaticProps = async ({params}) => {
     const storesList = stores.filter(s => s.id.toString() == params.id)
@@ -26,12 +27,16 @@ export const getStaticPaths = async () => {
 
 const Details = ({store}) => {
     return ( 
-        <div>
+        <div className={styles.onestore}>
             <h1>{store.name}</h1>
-            <p>{store.type}</p>
-            <p>{store.address}</p>
-            <p>{store.schedule}</p>
-            <p>{store.description}</p>
+            <img src="/hanging-clothes.jpeg" className={styles.imagestore}/>
+            <p>Type of store: {store.type}</p>
+            <p>Address: {store.address}</p>
+            <p>Schedule: {store.schedule}</p>
+            <p>What the store sells: {store.products}</p>
+            <p>Style: {store.style}</p>
+            <p>Price range: {store.price}</p>
+            <p>Description: {store.description}</p>
         </div>
      );
 }

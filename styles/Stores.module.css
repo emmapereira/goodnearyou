@@ -10,3 +10,14 @@
     border-left: 8px solid #E59E82;
   }
 
+  .onestore {
+    text-align: left;
+  }
+
+  .imagestore {
+    box-align: right;
+    position: relative;
+    width: 100%;
+   
+  }
+
