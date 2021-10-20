@@ -98,3 +98,39 @@
   background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
   background-image:url('../public/thrive.png')
 }
+
+.squarerec1 {
+  float:left;
+  position: relative;
+  width: 30%;
+  padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+  margin:1.66%;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+  background-image:url('../public/thriverec.jpeg')
+}
+
+.squarerec2 {
+  float:left;
+  position: relative;
+  width: 30%;
+  padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+  margin:1.66%;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+  background-image:url('../public/humanarec.webp')
+}
+
+.squarerec3 {
+  float:left;
+  position: relative;
+  width: 30%;
+  padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+  margin:1.66%;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+  background-image:url('../public/arkivetrec.jpeg')
+}
