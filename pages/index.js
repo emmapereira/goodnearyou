@@ -18,6 +18,7 @@ export default function Home() {
         <p className={styles.text}>This is the homepage of our project welcome to Good Near You</p>
       </div>
       <GMap/>
+      <div id="fakeMap"></div>
       <Recommended/>
       <InstagramFeed/>
     </>

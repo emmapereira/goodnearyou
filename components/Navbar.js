@@ -15,7 +15,7 @@ const Navbar = () => {
             <nav id="mobileMenu">
             <Link href="/"><a>Home</a></Link>
             <Link href="/map"><a>Map</a></Link>
-            <Link href="/about"><a>About</a></Link>
+            <Link href="/about"><a>About & Register</a></Link>
             </nav>
     }
 
@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
             <Link href="/"><a>Home</a></Link>
             <Link href="/map"><a>Map</a></Link>
-            <Link href="/about"><a>About</a></Link>
+            <Link href="/about"><a>About & Register</a></Link>
         </nav>
         </>
      );
