@@ -79,14 +79,28 @@ nav a {
   border: none;
   border-radius: 2em;
   position: relative;
-  top: 7em;
+  top: 5em;
   z-index: 2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 1em;
+  margin-top: -10em;
+  margin-bottom: -10em
 }
 
 .search input:active {
   border: none;
+}
+
+.locate {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 1em;
+  position: relative;
+  left: 120px;
+  top: 5em;
+  z-index: 2;
+  margin-top: -10em;
+  margin-bottom: -10em;
 }
 
 footer {
