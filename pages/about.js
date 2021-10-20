@@ -9,11 +9,11 @@ const About = () => {
             </Head>
             <div>
                 <h2>About & Register</h2>
-                <p>Good Near You is a site that collect all your favorite vintage stores in one place. Our interactive map allows you to search and find stores near you. On this site you can also find information about each store, such as opening hours, contact information, etc. In order for you to have as much information as possible regarding each store our AI analyzes each store's insagram feed. Based on this we provide an estimation regarding what type of products each store is selling. It have never been easier to find good vintage stores near you!
+                <p>Good Near You is a site that collect all your favorite vintage stores in one place. Our interactive map allows you to search and find stores near you. On this site you can also find information about each store, such as opening hours, contact information, etc. In order for you to have as much information as possible regarding each store our AI analyzes each store&apos;s insagram feed. Based on this we provide an estimation regarding what type of products each store is selling. It have never been easier to find good vintage stores near you!
                 </p>
 
                 <p>
-                    Do you own a vintage store and want to be added on the site? We are always welcoming new store to the site, the more the marrier! Simply fill out the form below and your store will be added to the site. Don't forget to link your instagram feed in order for us to make a prediction of your supply and bring more customers to your store!
+                    Do you own a vintage store and want to be added on the site? We are always welcoming new store to the site, the more the marrier! Simply fill out the form below and your store will be added to the site. Don&apos;t forget to link your instagram feed in order for us to make a prediction of your supply and bring more customers to your store!
                 </p>
             </div>
 

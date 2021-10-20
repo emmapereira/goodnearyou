@@ -4,7 +4,7 @@ import Link from 'next/link'
 const InstagramFeed = () => {
     return ( 
         <div className="content">
-            <h3>The store's instagrams</h3>
+            <h3>The store&apos;s instagrams</h3>
             
             <Link href="https://www.instagram.com/p/CUzVPXrLTY6/">
                 <div className={styles.square1}></div>

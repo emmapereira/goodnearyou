@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Recommended = () => {
     return ( 
         <div className="content">
-            <h3>This week's recommended stores</h3>
+            <h3>This week&apos;s recommended stores</h3>
             
             <Link href="https://www.thrivestore.se/">
                 <div className={styles.squarerec1}></div>
