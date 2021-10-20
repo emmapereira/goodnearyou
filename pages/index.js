@@ -23,6 +23,7 @@ export default function Home() {
       <div id="fakeMap"></div>
       <Recommended/>
       <InstagramFeed/>
+      <div id="fakeFeed"></div>
     </>
   )
 }

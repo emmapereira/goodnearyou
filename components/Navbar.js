@@ -14,7 +14,7 @@ const Navbar = () => {
         menu = 
             <nav id="mobileMenu">
             <Link href="/"><a>Home</a></Link>
-            <Link href="/map"><a>Map</a></Link>
+            <Link href="/map"><a>Stores</a></Link>
             <Link href="/about"><a>About & Register</a></Link>
             </nav>
     }
@@ -38,7 +38,7 @@ const Navbar = () => {
                 {/* <Image src="/gny.svg" width={535} height={65} /> */}
             </div>
             <Link href="/"><a>Home</a></Link>
-            <Link href="/map"><a>Map</a></Link>
+            <Link href="/map"><a>Stores</a></Link>
             <Link href="/about"><a>About & Register</a></Link>
         </nav>
         </>
