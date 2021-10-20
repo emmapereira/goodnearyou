@@ -19,6 +19,7 @@ export default function Home() {
         </Link>
       </div>
       <GMap/>
+      <div id="fakeMap"></div>
     </>
   )
 }
