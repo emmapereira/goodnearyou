@@ -23,8 +23,7 @@ const Map = ({storesList}) => {
                 <meta name="keywords" content="goodnearyou"/>
             </Head>
         <div>
-            <h1>See the map with all the stores here</h1>
-
+            <h2>Look for stores anywhere in the world</h2>
             <GMap/>
             <div id="fakeMap"></div>
             {storesList.map(store => (
