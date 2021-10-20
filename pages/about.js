@@ -6,6 +6,7 @@ const About = () => {
             <Head>
                 <title>Good Near You | About</title>
                 <meta name="keywords" content="goodnearyou"/>
+                <meta name="Viewport" content="width=device-width, initial-scale=1, maximum-scale=2"></meta>
             </Head>
             <div>
                 <h2>About & Register</h2>

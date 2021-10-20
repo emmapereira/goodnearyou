@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import stores from '../../data/stores.json'
 import styles from '../../styles/Stores.module.css'
 
@@ -27,6 +28,11 @@ export const getStaticPaths = async () => {
 
 const Details = ({store}) => {
     return ( 
+        <>
+        <Head>
+        <meta name="Viewport" content="width=device-width, initial-scale=1, maximum-scale=2"></meta>
+        </Head>
+
         <div className={styles.onestore}>
             <h1>{store.name}</h1>
             <img src="/hanging-clothes.jpeg" className={styles.imagestore}/>
@@ -38,6 +44,7 @@ const Details = ({store}) => {
             <p>Price range: {store.price}</p>
             <p>Description: {store.description}</p>
         </div>
+        </>
      );
 }
  

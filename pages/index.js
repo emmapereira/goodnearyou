@@ -11,7 +11,8 @@ export default function Home() {
     <>
       <Head>
         <title>Good Near You | Home</title>
-        <meta name="keywords" content="goodnearyou"/>
+        <meta name="keywords" content="goodnearyou" />
+        <meta name="Viewport" content="width=device-width, initial-scale=1, maximum-scale=2"></meta>
       </Head>
       <div>
         <h2 className={styles.title}>Homepage</h2>
