@@ -20,8 +20,10 @@ import usePlacesAutocomplete, {
 const libraries = ["places"]
 
 const mapContainerStyle = {
-    width:"70vw", 
-    height: "70vh"
+    width:"100vw", 
+    height: "70vh",
+    position: "absolute",
+    left: "0",
 }
 
 const center = {
