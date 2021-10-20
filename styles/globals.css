@@ -83,7 +83,7 @@ nav a {
   border: none;
   border-radius: 2em;
   position: relative;
-  top: 5em;
+  top: 8em;
   z-index: 2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 1em;
@@ -100,8 +100,9 @@ nav a {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 1em;
   position: relative;
+  background-color: #FFF;
   left: 120px;
-  top: 5em;
+  top: 8.5em;
   z-index: 2;
   margin-top: -10em;
   margin-bottom: -10em;
