@@ -21,9 +21,11 @@ const Navbar = () => {
 
     return ( 
         <>
-        <header>
-            <h1 id="title">Good Near You</h1>
-        </header>
+        <Link href="https://google.com">
+            <header>
+                <h1 id="title">Good Near You</h1>
+            </header>
+        </Link>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
