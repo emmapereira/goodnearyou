@@ -21,7 +21,7 @@ const Navbar = () => {
 
     return ( 
         <>
-        <Link href="https://google.com">
+        <Link href="https://goodnearyou.vercel.app/">
             <header>
                 <h1 id="title">Good Near You</h1>
             </header>
