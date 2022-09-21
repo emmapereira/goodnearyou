@@ -40,7 +40,8 @@ const center = {
 
 const GMap = () => { 
     const {isLoaded, loadError} = useLoadScript({
-        googleMapsApiKey: "AIzaSyCi0xsW1SJeoMI75dm4BRz01ab-ryQR0mg",            
+        //googleMapsApiKey: "AIzaSyCi0xsW1SJeoMI75dm4BRz01ab-ryQR0mg", 
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY,          
         libraries
     })
 
