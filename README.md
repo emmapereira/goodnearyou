@@ -1,4 +1,4 @@
-Project for Mobile Computing
+Project for Mobile Computing, website implemented using Next.js
 
 video for the project: https://youtu.be/eK8689Jgb7Y
 
