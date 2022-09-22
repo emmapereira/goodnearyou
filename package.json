@@ -12,6 +12,7 @@
     "@reach/combobox": "^0.16.2",
     "@react-google-maps/api": "^2.12.2",
     "caniuse-lite": "^1.0.30001408",
+    "minimist": "^1.2.6",
     "next": "12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
